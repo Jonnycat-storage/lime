@@ -106,11 +106,11 @@ namespace lime {
 			SDL_GL_SetAttribute (SDL_GL_CONTEXT_MAJOR_VERSION, 3);
 			#endif
 			
-                        //Testing glcore for macos 
+                        //Testing glcore for macos,the reason why we put it as 3.2 is because 3.2 is supported through core and its the one that i most trust lol 
 			#if defined (HX_MACOS)
+			SDL_GL_SetAttribute(SDL_GL_CONTEXT_PROFILE_MASK, SDL_GL_CONTEXT_PROFILE_CORE);
 			SDL_GL_SetAttribute(SDL_GL_CONTEXT_MAJOR_VERSION, 3);
 			SDL_GL_SetAttribute(SDL_GL_CONTEXT_MINOR_VERSION, 2);
-			SDL_GL_SetAttribute(SDL_GL_CONTEXT_PROFILE_MASK, SDL_GL_CONTEXT_PROFILE_CORE);
 			#endif
 			
 			if (flags & WINDOW_FLAG_DEPTH_BUFFER) {

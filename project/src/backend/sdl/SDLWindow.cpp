@@ -111,6 +111,7 @@ namespace lime {
 			SDL_GL_SetAttribute(SDL_GL_CONTEXT_PROFILE_MASK, SDL_GL_CONTEXT_PROFILE_CORE);
 			SDL_GL_SetAttribute(SDL_GL_CONTEXT_MAJOR_VERSION, 3);
 			SDL_GL_SetAttribute(SDL_GL_CONTEXT_MINOR_VERSION, 2);
+			SDL_SetHint (SDL_HINT_RENDER_DRIVER, "opengl"); //using Opengl instead i know opengl is outdated for m1 users on mac
 			#endif
 			
 			if (flags & WINDOW_FLAG_DEPTH_BUFFER) {
